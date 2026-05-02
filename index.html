@@ -12,14 +12,4 @@
 <img src="LindaSun.jpg" alt="Klosters" width="450" height="600" border="10"><img src="jetty.jpg" alt="Emma all arty" width="600" height="600" border="10"><img src="Kilim Geopark4.jpg" width="337" height="600" border="10">
 </p>
 </html>
-<script>
-fetch("https://api.rss2json.com/v1/api.json?rss_url=http://news.ft.com/rss/home/uk")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("feed").innerHTML =
-      data.items.map(item => `<p><a href="${item.link}">${item.title}</a></p>`).join("");
-  });
-</script>
-
-<div id="feed"></div>
 
